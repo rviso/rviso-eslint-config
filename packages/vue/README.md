@@ -1,4 +1,4 @@
-# @blanc-nova/eslint-config-vue
+# @rviso/eslint-config-vue
 
 专为Vue项目提供的ESLint配置。
 
@@ -7,7 +7,7 @@
 要安装这个包，请运行以下命令：
 
 ```bash
-npm install @blanc-nova/eslint-config-vue --save-dev
+npm install @rviso/eslint-config-vue --save-dev
 
 ```
 
@@ -17,6 +17,6 @@ npm install @blanc-nova/eslint-config-vue --save-dev
 
 ```js
 module.exports = {
-  extends: ['@blanc-nova/eslint-config-vue'],
+  extends: ['@rviso/eslint-config-vue'],
 }
 ```

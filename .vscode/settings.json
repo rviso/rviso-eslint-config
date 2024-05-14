@@ -5,5 +5,5 @@
     "source.fixAll.eslint": "explicit"
   },
   "GitCommitPlugin.MaxSubjectCharacters": 40,
-  "cSpell.words": [],
+  "cSpell.words": ["rviso", "viso"]
 }

@@ -1,6 +1,6 @@
 {
-  "name": "@blanc-nova/eslint-config-standard",
-  "version": "0.1.8",
+  "name": "@rviso/eslint-config-standard",
+  "version": "0.0.0",
   "description": "提供基础的 ESLint 配置",
   "main": "index.js",
   "scripts": {

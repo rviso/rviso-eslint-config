@@ -1,22 +1,22 @@
-# Blanc Nova ESLint Config
+# RViso ESLint Config
 
 [English](./README.md) | **中文**
 
-![npm](https://img.shields.io/npm/v/@blanc-nova/eslint-config-vue)
+![npm](https://img.shields.io/npm/v/@rviso/eslint-config-vue)
 ![node](https://img.shields.io/badge/node-%5E18.0.0-bluegreen)
 ![author](https://img.shields.io/badge/author-lingann-purple)
 ![license](https://img.shields.io/github/license/lingann/blanc-nova-eslint-config)
 
 ---
 
-Blanc Nova的ESLint配置。您可以使用此包来为您的JavaScript、TypeScript和Vue3项目提供代码检查。
+RViso的ESLint配置。您可以使用此包来为您的JavaScript、TypeScript和Vue3项目提供代码检查。
 
 ## Installation
 
 要安装这个包，请运行以下命令：
 
 ```bash
-npm install eslint @blanc-nova/eslint-config-standard @blanc-nova/eslint-config-typescript @blanc-nova/eslint-config-vue --save-dev
+npm install eslint @rviso/eslint-config-standard @rviso/eslint-config-typescript @rviso/eslint-config-vue --save-dev
 ```
 
 ## Usage
@@ -25,15 +25,15 @@ npm install eslint @blanc-nova/eslint-config-standard @blanc-nova/eslint-config-
 
 ```json
 {
-  "extends": ["@blanc-nova/eslint-config-standard"],
+  "extends": ["@rviso/eslint-config-standard"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx"],
-      "extends": "@blanc-nova/eslint-config-typescript"
+      "extends": "@rviso/eslint-config-typescript"
     },
     {
       "files": ["*.vue"],
-      "extends": "@blanc-nova/eslint-config-vue"
+      "extends": "@rviso/eslint-config-vue"
     }
   ]
 }
@@ -43,15 +43,15 @@ npm install eslint @blanc-nova/eslint-config-standard @blanc-nova/eslint-config-
 
 ```json
 {
-  "extends": ["@blanc-nova/eslint-config-standard"],
+  "extends": ["@rviso/eslint-config-standard"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx"],
-      "extends": "@blanc-nova/eslint-config-typescript"
+      "extends": "@rviso/eslint-config-typescript"
     },
     {
       "files": ["*.vue"],
-      "extends": "@blanc-nova/eslint-config-vue",
+      "extends": "@rviso/eslint-config-vue",
       "parserOptions": {
         "parser": "@typescript-eslint/parser"
       }
@@ -95,6 +95,6 @@ npm install eslint @blanc-nova/eslint-config-standard @blanc-nova/eslint-config-
 
 ## Related
 
-- [@blanc-nova/eslint-config-standard](https://www.npmjs.com/package/@blanc-nova/eslint-config-standard) - Blanc Nova 的 ESLint 标准配置
-- [@blanc-nova/eslint-config-typescript](https://www.npmjs.com/package/@blanc-nova/eslint-config-typescript) - Blanc Nova 的 ESLint TypeScript 配置。
-- [@blanc-nova/eslint-config-vue](https://www.npmjs.com/package/@blanc-nova/eslint-config-vue) - Blanc Nova 的 ESLint Vue 配置。
+- [@rviso/eslint-config-standard](https://www.npmjs.com/package/@rviso/eslint-config-standard) - RViso 的 ESLint 标准配置
+- [@rviso/eslint-config-typescript](https://www.npmjs.com/package/@rviso/eslint-config-typescript) - RViso 的 ESLint TypeScript 配置。
+- [@rviso/eslint-config-vue](https://www.npmjs.com/package/@rviso/eslint-config-vue) - RViso 的 ESLint Vue 配置。

@@ -1,4 +1,4 @@
-# @blanc-nova/eslint-config-standard
+# @rviso/eslint-config-standard
 
 提供基础的 ESLint 配置。
 
@@ -7,13 +7,13 @@
 要安装这个包，请运行以下命令：
 
 ```bash
-npm install @blanc-nova/eslint-config-standard --save-dev
+npm install @rviso/eslint-config-standard --save-dev
 ```
 
 或者使用 [yarn](https://yarnpkg.com)：
 
 ```bash
-yarn add @blanc-nova/eslint-config-standard --dev
+yarn add @rviso/eslint-config-standard --dev
 ```
 
 ## 使用
@@ -22,6 +22,6 @@ yarn add @blanc-nova/eslint-config-standard --dev
 
 ```js
 module.exports = {
-  extends: ['@blanc-nova/eslint-config-standard'],
+  extends: ['@rviso/eslint-config-standard'],
 }
 ```

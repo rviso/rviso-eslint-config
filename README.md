@@ -1,22 +1,22 @@
-# Blanc Nova ESLint Config
+# RViso ESLint Config
 
 **English** | [中文](./README_zh-CN.md)
 
-![npm](https://img.shields.io/npm/v/@blanc-nova/eslint-config-vue)
+![npm](https://img.shields.io/npm/v/@rviso/eslint-config-vue)
 ![node](https://img.shields.io/badge/node-%5E18.0.0-bluegreen)
 ![author](https://img.shields.io/badge/author-lingann-purple)
 ![license](https://img.shields.io/github/license/lingann/blanc-nova-eslint-config)
 
 ---
 
-Blanc Nova's ESLint configurations. you can use this package to lint your JavaScript, TypeScript, and Vue3 projects.
+RViso's ESLint configurations. you can use this package to lint your JavaScript, TypeScript, and Vue3 projects.
 
 ## Installation
 
 To install this package, run the following command:
 
 ```bash
-npm install eslint @blanc-nova/eslint-config-standard @blanc-nova/eslint-config-typescript @blanc-nova/eslint-config-vue --save-dev
+npm install eslint @rviso/eslint-config-standard @rviso/eslint-config-typescript @rviso/eslint-config-vue --save-dev
 ```
 
 ## Usage
@@ -25,15 +25,15 @@ Create a `.eslintrc` file in the root directory of your project with the followi
 
 ```json
 {
-  "extends": ["@blanc-nova/eslint-config-standard"],
+  "extends": ["@rviso/eslint-config-standard"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx"],
-      "extends": "@blanc-nova/eslint-config-typescript"
+      "extends": "@rviso/eslint-config-typescript"
     },
     {
       "files": ["*.vue"],
-      "extends": "@blanc-nova/eslint-config-vue"
+      "extends": "@rviso/eslint-config-vue"
     }
   ]
 }
@@ -43,15 +43,15 @@ if you are using Vue 3 + TypeScript, you can use the following configuration:
 
 ```json
 {
-  "extends": ["@blanc-nova/eslint-config-standard"],
+  "extends": ["@rviso/eslint-config-standard"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx"],
-      "extends": "@blanc-nova/eslint-config-typescript"
+      "extends": "@rviso/eslint-config-typescript"
     },
     {
       "files": ["*.vue"],
-      "extends": "@blanc-nova/eslint-config-vue",
+      "extends": "@rviso/eslint-config-vue",
       "parserOptions": {
         "parser": "@typescript-eslint/parser"
       }
@@ -99,6 +99,6 @@ To make these settings take effect, you need to install the following plugins:
 
 ## Related
 
-- [@blanc-nova/eslint-config-standard](https://www.npmjs.com/package/@blanc-nova/eslint-config-standard) - Blanc Nova's ESLint standard configurations.
-- [@blanc-nova/eslint-config-typescript](https://www.npmjs.com/package/@blanc-nova/eslint-config-typescript) - Blanc Nova's ESLint TypeScript configurations.
-- [@blanc-nova/eslint-config-vue](https://www.npmjs.com/package/@blanc-nova/eslint-config-vue) - Blanc Nova's ESLint Vue configurations.
+- [@rviso/eslint-config-standard](https://www.npmjs.com/package/@rviso/eslint-config-standard) - RViso's ESLint standard configurations.
+- [@rviso/eslint-config-typescript](https://www.npmjs.com/package/@rviso/eslint-config-typescript) - RViso's ESLint TypeScript configurations.
+- [@rviso/eslint-config-vue](https://www.npmjs.com/package/@rviso/eslint-config-vue) - RViso's ESLint Vue configurations.
