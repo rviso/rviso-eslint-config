@@ -1,0 +1,9 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // 默认格式化工具
+  "editor.formatOnSave": true, // 保存自动格式化
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "GitCommitPlugin.MaxSubjectCharacters": 40,
+  "cSpell.words": [],
+}

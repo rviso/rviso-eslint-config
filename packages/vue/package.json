@@ -1,0 +1,41 @@
+{
+  "name": "@blanc-nova/eslint-config-vue",
+  "version": "0.1.8",
+  "description": "专为Vue项目提供的ESLint配置",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "eslint-config"
+  ],
+  "author": "Lingann Wang",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "index.js"
+  ],
+  "peerDependencies": {
+    "eslint": ">=8.0.1"
+  },
+  "dependencies": {
+    "@blanc-nova/eslint-config-standard": "^0.1.8",
+    "eslint": "^8.16.0",
+    "eslint-plugin-vue": "^9.3.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "eslint-vue",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lingann/blanc-nova-eslint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Lingann/blanc-nova-eslint-config/issues"
+  },
+  "gitHead": "65d7706106e283a5cfc82552add8d5d6ecc2efb7"
+}

@@ -1,0 +1,13 @@
+{
+  "npmClient": "pnpm",
+  "version": "0.1.8",
+  "packages": ["packages/*"],
+  "command": {
+    "publish": {
+      "allowBranch": ["master"],
+      "message": "chore(release): publish",
+      "registry": "https://registry.npmjs.org/"
+    }
+  },
+  "$schema": "node_modules/lerna/schemas/lerna-schema.json"
+}

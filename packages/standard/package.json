@@ -1,0 +1,54 @@
+{
+  "name": "@blanc-nova/eslint-config-standard",
+  "version": "0.1.8",
+  "description": "提供基础的 ESLint 配置",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "eslint-config"
+  ],
+  "author": "Lingann Wang",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.10.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-html": "^6.2.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsonc": "^2.2.1",
+    "eslint-plugin-markdown": "^2.2.1",
+    "eslint-plugin-n": "^15.2.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-unicorn": "^42.0.0",
+    "eslint-plugin-yml": "^1.0.0",
+    "jsonc-eslint-parser": "^2.1.0",
+    "prettier": "^3.2.5",
+    "yaml-eslint-parser": "^1.0.1"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.0.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.0",
+    "eslint-plugin-promise": "^6.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "eslint-standard",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lingann/blanc-nova-eslint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Lingann/blanc-nova-eslint-config/issues"
+  },
+  "gitHead": "65d7706106e283a5cfc82552add8d5d6ecc2efb7"
+}
