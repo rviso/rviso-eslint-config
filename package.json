@@ -25,9 +25,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Lingann/blanc-nova-eslint-config.git"
+    "url": "git+https://github.com/rviso/rviso-eslint-config.git"
   },
   "bugs": {
-    "url": "https://github.com/Lingann/blanc-nova-eslint-config/issues"
+    "url": "https://github.com/rviso/rviso-eslint-config/issues"
   }
 }
