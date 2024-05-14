@@ -74,7 +74,7 @@ importers:
   packages/typescript:
     dependencies:
       '@rviso/eslint-config-standard':
-        specifier: ^0.0.0
+        specifier: ^0.1.0
         version: link:../standard
       '@typescript-eslint/eslint-plugin':
         specifier: ^5.26.0
@@ -92,7 +92,7 @@ importers:
   packages/vue:
     dependencies:
       '@rviso/eslint-config-standard':
-        specifier: ^0.0.0
+        specifier: ^0.1.0
         version: link:../standard
       eslint:
         specifier: ^8.16.0
