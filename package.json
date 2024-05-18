@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "update-version": "lerna version",
     "sort-package": "npx sort-package-json",
-    "release": "lerna publish"
+    "release": "lerna publish --force-publish=*"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
