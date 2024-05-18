@@ -1,5 +1,5 @@
 {
-  "name": "@rviso/eslint-plugin-rust",
+  "name": "eslint-plugin-rust",
   "version": "0.1.1",
   "description": "提供 Rust 项目的 ESLint 配置",
   "main": "index.js",
