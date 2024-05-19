@@ -1,5 +1,5 @@
 'use strict'
-// 基本eslint-配置
+
 module.exports = {
   parserOptions: {
     ecmaVersion: 2022,
@@ -15,13 +15,13 @@ module.exports = {
   },
   reportUnusedDisableDirectives: true,
   extends: [
+    'standard',
+    'plugin:prettier/recommended',
     'plugin:import/recommended',
     'plugin:eslint-comments/recommended',
     'plugin:jsonc/recommended-with-jsonc',
     'plugin:yml/standard',
     'plugin:markdown/recommended',
-    'eslint-config-standard',
-    'prettier',
   ],
   ignorePatterns: [
     '*.min.*',
@@ -41,10 +41,10 @@ module.exports = {
     '!.vitepress',
     '!.vscode',
   ],
-  plugins: ['html', 'unicorn', 'prettier'],
+  plugins: ['html', 'unicorn'],
   settings: {
     'import/resolver': {
-      node: { extensions: ['.js', '.mjs'] },
+      node: { extensions: ['.js', '.mjs', '.ts', '.d.ts', '.json'] },
     },
   },
   overrides: [
@@ -77,6 +77,8 @@ module.exports = {
       parser: 'yaml-eslint-parser',
       rules: {
         'spaced-comment': 'off',
+        'yml/quotes': ['error', { prefer: 'single', avoidEscape: false }], // 禁止使用双引号
+        'yml/no-empty-document': 'off', // 禁止空文档
       },
     },
     {
@@ -191,67 +193,66 @@ module.exports = {
     },
   ],
   rules: {
-    'prettier/prettier': [
-      'error',
-      {
-        // 禁止末尾逗号
-        trailingComma: 'none',
-      },
-    ],
-    // import
-    'import/order': 'error', // 引入顺序
-    'import/first': 'error', // 引入顺序
-    'import/no-mutable-exports': 'error', // 禁止使用 let 和 var 导出
-    'import/no-unresolved': 'off', // 有时候会有未解析的路径
-    'import/no-absolute-path': 'off', // 有时候会有绝对路径
+    //#region 与eslint官方规则 命名 相关的规则
+    //---------------- 与eslint官方规则 命名 相关的规则 --------------
+    camelcase: 'off', // 有时候会有驼峰命名
+    //#endregion
 
-    // Common
-    // 函数最大行数
-    'max-lines-per-function': 'off',
-    indent: 'off', // 强制使用一致的缩进
-    semi: 'off', // 禁止使用分号
-    curly: 'off', // 强制使用大括号
-    quotes: 'off', // 强制使用单引号
-    'arrow-parens': 'off', // 要求箭头函数的参数使用圆括号
-    'quote-props': 'off', // 强制对象属性使用单引号
+    //#region 与eslint官方规则 格式化 相关的规则
+    // -------------- 与eslint官方规则 style 相关的规则 --------------
+    // 'operator-linebreak': 'error', // 强制操作符使用一致的换行符风格
+    // indent: 'off', // 强制使用一致的缩进
+    // semi: 'off', // 禁止使用分号
+    // curly: 'off', // 强制使用大括号
+    // 'no-multi-spaces': 'error', // 禁止使用多个空格
+    // 'comma-spacing': ['error', { before: false, after: true }], // 强制在逗号前后使用一致的空格
+    // 'comma-style': ['error', 'last'], // 强制使用一致的逗号风格
+    // 'comma-dangle': 'off', // 强制在对象字面量的属性和方法中使用一致的逗号
+    // 'arrow-parens': 'off', // 要求箭头函数的参数使用圆括号
+    // quotes: 'off', // 强制使用单引号
+    // 'quote-props': 'off', // 强制对象属性使用单引号
+    // 'array-bracket-spacing': ['error', 'never'], // 禁止使用空格
+    // 'brace-style': ['error', '1tbs', { allowSingleLine: false }], // 强制大括号风格
+    // 'block-spacing': ['error', 'always'], // 强制在代码块中开括号前和闭括号后有空格
+    // 'func-call-spacing': ['off', 'never'], // 禁止在函数标识符和其调用之间有空格
+    // 'key-spacing': ['error', { beforeColon: false, afterColon: true }], // 强制在对象字面量的属性中键和值之间使用一致的间距
+    // 'object-curly-spacing': ['error', 'always'], // 强制在大括号中使用一致的空格
+    // 'no-multiple-empty-lines': ['error', { max: 1, maxBOF: 0, maxEOF: 1 }], // 禁止出现多行空行
+    // 'generator-star-spacing': 'off', // 强制 generator 函数中 * 号周围使用一致的空格
+    // // 强制在 function的左括号之前使用一致的空格
+    // 'space-before-function-paren': [
+    //   'error',
+    //   {
+    //     anonymous: 'always',
+    //     named: 'never',
+    //     asyncArrow: 'always',
+    //   },
+    // ],
+    // // 强制在注释中 // 或 /* 使用一致的空格
+    // 'spaced-comment': [
+    //   'error',
+    //   'always',
+    //   {
+    //     line: {
+    //       markers: ['/'],
+    //       exceptions: ['/', '#'],
+    //     },
+    //     block: {
+    //       markers: ['!'],
+    //       exceptions: ['*'],
+    //       balanced: true,
+    //     },
+    //   },
+    // ],
+    //#endregion
+
+    //#region 与eslint官方规则 es6 变量 相关的规则
+    // ------------------------------------------------------------------
+    'no-var': 'error', // 禁止使用 var
     'no-unused-vars': 'warn', // 有时候会有未使用的变量
     'no-param-reassign': 'off', // 有时候会有对参数重新赋值
-    'array-bracket-spacing': ['error', 'never'], // 禁止使用空格
-    'brace-style': ['error', '1tbs', { allowSingleLine: false }], // 强制大括号风格
-    'block-spacing': ['error', 'always'], // 强制在代码块中开括号前和闭括号后有空格
-    camelcase: 'off', // 有时候会有驼峰命名
-    'comma-spacing': ['error', { before: false, after: true }], // 强制在逗号前后使用一致的空格
-    'comma-style': ['error', 'last'], // 强制使用一致的逗号风格
-    'comma-dangle': 'off', // 强制在对象字面量的属性和方法中使用一致的逗号
     'no-constant-condition': 'warn', // 有时候会有常量条件
-    'no-debugger': 'error', // 禁止使用 debugger
-    'no-console': ['error', { allow: ['warn', 'error'] }], // 禁止使用 console
-    'no-cond-assign': ['error', 'always'], // 禁止条件表达式中出现赋值操作符
-    'func-call-spacing': ['off', 'never'], // 禁止在函数标识符和其调用之间有空格
-    'key-spacing': ['error', { beforeColon: false, afterColon: true }], // 强制在对象字面量的属性中键和值之间使用一致的间距
-
-    'no-restricted-syntax': [
-      // 禁止使用特定的语法
-      'error',
-      'DebuggerStatement',
-      'LabeledStatement',
-      'WithStatement',
-    ],
-    'object-curly-spacing': ['error', 'always'], // 强制在大括号中使用一致的空格
-    'no-return-await': 'off', // 有时候会有 return await
-    'space-before-function-paren': [
-      // 强制在 function的左括号之前使用一致的空格
-      'error',
-      {
-        anonymous: 'always',
-        named: 'never',
-        asyncArrow: 'always',
-      },
-    ],
-    'no-multiple-empty-lines': ['error', { max: 1, maxBOF: 0, maxEOF: 1 }], // 禁止出现多行空行
-
-    // es6
-    'no-var': 'error', // 禁止使用 var
+    'block-scoped-var': 'error', // 强制把变量的使用限制在其定义的作用域范围内
     'prefer-const': [
       // 要求使用 const 声明那些声明后不再被修改的变量
       'error',
@@ -260,16 +261,33 @@ module.exports = {
         ignoreReadBeforeAssign: true,
       },
     ],
-    'prefer-arrow-callback': [
-      // 要求回调函数使用箭头函数
+    'no-use-before-define': [
       'error',
-      {
-        allowNamedFunctions: false,
-        allowUnboundThis: true,
-      },
+      { functions: false, classes: false, variables: true },
+    ], // 禁止在变量定义之前使用它们
+    //#endregion
+
+    //#region 与eslint官方规则 es6 语法 相关的规则
+    // ------------------------------------------------------------------
+    eqeqeq: ['error', 'smart'], // 要求使用 === 和 !==
+    'no-cond-assign': ['error', 'always'], // 禁止条件表达式中出现赋值操作符
+    complexity: ['off', 11], // 强制可控的对象字面量中只能出现一次指定的属性
+    'no-case-declarations': 'error', // 不允许在 case 子句中使用词法声明
+    'no-multi-str': 'error', // 禁止使用多行字符串
+    'no-with': 'error', // 禁用 with 语句
+    'no-void': 'error', // 禁用 void 操作符
+    'no-useless-escape': 'off', // 禁用不必要的转义字符
+    'no-prototype-builtins': 'error', // 禁止直接使用 Object.prototypes 的内置属性
+    'vars-on-top': 'error', // 要求所有的 var 声明出现在它们所在的作用域顶部
+    'no-restricted-syntax': [
+      // 禁止使用特定的语法
+      'error',
+      'DebuggerStatement',
+      'LabeledStatement',
+      'WithStatement',
     ],
+    // 要求或禁止对象字面量中方法和属性使用简写语法
     'object-shorthand': [
-      // 要求或禁止对象字面量中方法和属性使用简写语法
       'error',
       'always',
       {
@@ -282,45 +300,56 @@ module.exports = {
     'prefer-spread': 'off', // 要求使用扩展运算符而非 .apply()
     'prefer-template': 'error', // 要求使用模板字面量而非字符串连接
     'template-curly-spacing': 'error', // 要求或禁止模板字符串中的嵌入表达式周围空格的使用
+    //#endregion
 
-    'generator-star-spacing': 'off', // 强制 generator 函数中 * 号周围使用一致的空格
-    'spaced-comment': [
+    //#region 与eslint官方规则 function 相关的规则
+    // ------------------------------------------------------------------
+    'max-lines-per-function': 'off', // 函数最大行数
+    'no-return-await': 'off', // 有时候会有 return await
+    'array-callback-return': 'error', // 强制数组方法的回调函数中有 return 语句
+    'no-return-assign': 'error', // 禁止在 return 语句中使用赋值语句
+    // 要求回调函数使用箭头函数
+    'prefer-arrow-callback': [
       'error',
-      'always',
+      { allowNamedFunctions: false, allowUnboundThis: true },
+    ],
+    'consistent-return': 'off', // 要求 return 语句要么总是指定返回的值，要么不指定
+    'require-await': 'error', // 禁止使用不带 await 表达式的 async 函数
+    // ------------------------------------------------------------------
+    //#endregion
+
+    //#region 与eslint官方规则 打印和调试 相关的规则
+    // ------------------------------------------------------------------
+    'no-debugger': 'error', // 禁止使用 debugger
+    'no-console': ['error', { allow: ['warn', 'error'] }], // 禁止使用 console
+    'no-alert': 'warn', // 禁用 alert、confirm 和 prompt
+    // ------------------------------------------------------------------
+    //#endregion
+
+    //#region 与eslint-plugin-import相关的规则
+    // -------------- 与eslint-plugin-import相关的规则 --------------
+    'import/order': 'error', // 引入顺序
+    'import/first': 'error', // 引入顺序
+    'import/no-mutable-exports': 'error', // 禁止使用 let 和 var 导出
+    'import/no-unresolved': 'error', // 有时候会有未解析的路径
+    'import/no-absolute-path': 'error', // 有时候会有绝对路径
+    'import/no-named-as-default-member': 'error', // 禁止将默认导出的名称用作命名导出
+    'import/no-named-as-default': 'error', // 禁止将默认导出的名称用作命名导出
+    'import/namespace': 'error', // 禁止将默认导出的名称用作命名导出
+    'sort-imports': [
+      'error',
       {
-        // 强制在注释中 // 或 /* 使用一致的空格
-        line: {
-          markers: ['/'],
-          exceptions: ['/', '#'],
-        },
-        block: {
-          markers: ['!'],
-          exceptions: ['*'],
-          balanced: true,
-        },
+        ignoreCase: false,
+        ignoreDeclarationSort: true,
+        ignoreMemberSort: false,
+        memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
+        allowSeparatedGroups: false,
       },
     ],
+    //#endregion
 
-    // best-practice
-    'array-callback-return': 'error', // 强制数组方法的回调函数中有 return 语句
-    'block-scoped-var': 'error', // 强制把变量的使用限制在其定义的作用域范围内
-    'consistent-return': 'off', // 要求 return 语句要么总是指定返回的值，要么不指定
-    complexity: ['off', 11], // 强制可控的对象字面量中只能出现一次指定的属性
-    eqeqeq: ['error', 'smart'], // 要求使用 === 和 !==
-    'no-alert': 'warn', // 禁用 alert、confirm 和 prompt
-    'no-case-declarations': 'error', // 不允许在 case 子句中使用词法声明
-    'no-multi-spaces': 'error', // 禁止使用多个空格
-    'no-multi-str': 'error', // 禁止使用多行字符串
-    'no-with': 'error', // 禁用 with 语句
-    'no-void': 'error', // 禁用 void 操作符
-    'no-useless-escape': 'off', // 禁用不必要的转义字符
-    'no-prototype-builtins': 'off', // 禁止直接使用 Object.prototypes 的内置属性
-    'vars-on-top': 'error', // 要求所有的 var 声明出现在它们所在的作用域顶部
-    'require-await': 'off', // 禁止使用不带 await 表达式的 async 函数
-    'no-return-assign': 'off', // 禁止在 return 语句中使用赋值语句
-    'operator-linebreak': 'off', // 强制操作符使用一致的换行符风格
-
-    // unicorns
+    //#region eslint-plugin-unicorn 相关的规则
+    // ------------------------------------------------------------------
     // 要求抛出错误时传入 Error 对象而不是字符串
     'unicorn/error-message': 'error',
     // 要求正则表达式中使用 u 标志
@@ -343,28 +372,19 @@ module.exports = {
     'unicorn/prefer-type-error': 'error',
     // 要求抛出 Error 对象而不是字符串
     'unicorn/throw-new-error': 'error',
+    // ------------------------------------------------------------------
+    //#endregion
 
-    'no-use-before-define': [
-      'error',
-      { functions: false, classes: false, variables: true },
-    ], // 禁止在变量定义之前使用它们
+    //#region eslint-plugin-eslint-comments 相关的规则
+    // ------------------------------------------------------------------
     'eslint-comments/disable-enable-pair': 'off', // 禁止在 eslint-disable-next-line 注释中禁用多个规则
-    'import/no-named-as-default-member': 'off', // 禁止将默认导出的名称用作命名导出
-    'import/no-named-as-default': 'off', // 禁止将默认导出的名称用作命名导出
-    'import/namespace': 'off', // 禁止将默认导出的名称用作命名导出
+    // ------------------------------------------------------------------
+    //#endregion
+
+    //#region eslint-plugin-n 相关的规则
+    // ------------------------------------------------------------------
     'n/no-callback-literal': 'off', // 禁止将默认导出的名称用作命名导出
-    'sort-imports': [
-      'error',
-      {
-        ignoreCase: false,
-        ignoreDeclarationSort: true,
-        ignoreMemberSort: false,
-        memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
-        allowSeparatedGroups: false,
-      },
-    ],
-    // yml
-    'yml/quotes': ['error', { prefer: 'single', avoidEscape: false }], // 禁止使用双引号
-    'yml/no-empty-document': 'off', // 禁止空文档
+    // ------------------------------------------------------------------
+    //#endregion
   },
 }
