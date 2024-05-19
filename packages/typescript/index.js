@@ -78,7 +78,7 @@ module.exports = {
         offsetTernaryExpressions: true,
       },
     ],
-    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }], // 禁止未使用的变量
+    '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }], // 禁止未使用的变量
     '@typescript-eslint/no-redeclare': 'error', // 禁止重复声明
     '@typescript-eslint/no-use-before-define': [
       'error',

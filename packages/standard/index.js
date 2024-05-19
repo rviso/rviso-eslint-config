@@ -22,6 +22,7 @@ module.exports = {
     'plugin:jsonc/recommended-with-jsonc',
     'plugin:yml/standard',
     'plugin:markdown/recommended',
+    'plugin:toml/standard',
   ],
   ignorePatterns: [
     '*.min.*',
@@ -193,6 +194,10 @@ module.exports = {
         'no-unused-vars': 'off', // 有时候会有未使用的变量
       },
     },
+    {
+      files: ['*.toml'],
+      parser: 'toml-eslint-parser',
+    },
   ],
   rules: {
     'prettier/prettier': [
@@ -335,8 +340,8 @@ module.exports = {
 
     //#region 与eslint官方规则 打印和调试 相关的规则
     // ------------------------------------------------------------------
-    'no-debugger': 'error', // 禁止使用 debugger
-    'no-console': ['error', { allow: ['warn', 'error'] }], // 禁止使用 console
+    'no-debugger': 'warn', // 禁止使用 debugger
+    'no-console': ['warn', { allow: ['warn', 'error'] }], // 禁止使用 console
     'no-alert': 'warn', // 禁用 alert、confirm 和 prompt
     // ------------------------------------------------------------------
     //#endregion
