@@ -1,6 +1,10 @@
 'use strict'
 module.exports = {
-  extends: ['plugin:vue/vue3-recommended'],
+  extends: [
+    'standard',
+    'plugin:import/typescript',
+    'plugin:vue/vue3-recommended',
+  ],
   overrides: [
     {
       files: ['*.vue'],
@@ -15,6 +19,7 @@ module.exports = {
     'max-lines-per-function': 'off',
     // 禁止使用未导出的名称
     'import/named': 'off',
+    'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
 
     // ------------------vue相关------------------
     // 有关vue的规则请参考：https://eslint.vuejs.org/rules/
@@ -186,7 +191,17 @@ module.exports = {
     'vue/space-unary-ops': ['error', { words: true, nonwords: false }],
     // 模板大括号空格
     'vue/template-curly-spacing': 'error',
-    // 自闭合标签
-    'vue/html-self-closing': 'off',
+
+    'vue/prefer-import-from-vue': 'error',
+    'vue/comma-dangle': 'error',
+    'vue/max-attributes-per-line': 'error',
+    'vue/html-indent': ['error', 2],
+    'vue/singleline-html-element-content-newline': 'error',
+    'vue/multiline-html-element-content-newline': 'error',
+
+    '@typescript-eslint/consistent-type-imports': [
+      'error',
+      { prefer: 'type-imports', disallowTypeAnnotations: false },
+    ], // 类型导入
   },
 }
