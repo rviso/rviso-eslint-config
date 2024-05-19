@@ -29,7 +29,7 @@
   },
   "publishConfig": {
     "access": "public",
-    "tag": "eslint-typescript",
+    "tag": "latest",
     "registry": "https://registry.npmjs.org/"
   },
   "repository": {

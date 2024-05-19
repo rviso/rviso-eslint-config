@@ -41,7 +41,7 @@
   },
   "publishConfig": {
     "access": "public",
-    "tag": "eslint-standard",
+    "tag": "latest",
     "registry": "https://registry.npmjs.org/"
   },
   "repository": {
