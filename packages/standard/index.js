@@ -22,7 +22,6 @@ module.exports = {
     'plugin:jsonc/recommended-with-jsonc',
     'plugin:yml/standard',
     'plugin:markdown/recommended',
-    'plugin:toml/standard',
   ],
   ignorePatterns: [
     '*.min.*',
@@ -196,6 +195,7 @@ module.exports = {
     },
     {
       files: ['*.toml'],
+      extends: ['plugin:toml/standard'],
       parser: 'toml-eslint-parser',
     },
   ],
