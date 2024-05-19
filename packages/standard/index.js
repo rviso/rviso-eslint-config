@@ -201,6 +201,12 @@ module.exports = {
         'prettier/prettier': 'off',
       },
     },
+    {
+      files: ['*.vue'],
+      rules: {
+        'prettier/prettier': 'off',
+      },
+    },
   ],
   rules: {
     'prettier/prettier': [
