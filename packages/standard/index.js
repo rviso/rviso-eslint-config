@@ -198,10 +198,12 @@ module.exports = {
     'prettier/prettier': [
       'error',
       {
-        singleQuote: true,
-        trailingComma: 'all',
-        printWidth: 100,
         tabWidth: 2,
+        useTabs: false,
+        singleQuote: true,
+        semi: false,
+        bracketSpacing: true,
+        endOfLine: 'lf',
       },
     ],
 
@@ -212,7 +214,7 @@ module.exports = {
 
     //#region 与eslint官方规则 格式化 相关的规则
     // -------------- 与eslint官方规则 style 相关的规则 --------------
-    // 'operator-linebreak': 'error', // 强制操作符使用一致的换行符风格
+    'operator-linebreak': 'error', // 强制操作符使用一致的换行符风格
     // indent: 'off', // 强制使用一致的缩进
     // semi: 'off', // 禁止使用分号
     // curly: 'off', // 强制使用大括号

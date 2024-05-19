@@ -19,13 +19,13 @@ module.exports = {
     // ------------------vue相关------------------
     // 有关vue的规则请参考：https://eslint.vuejs.org/rules/
     // 属性换行
-    'vue/max-attributes-per-line': 'off',
+    'vue/max-attributes-per-line': 'error',
     // 禁止使用 v-html
     'vue/no-v-html': 'off',
     // 禁止使用 prop-types
-    'vue/require-prop-types': 'off',
+    'vue/require-prop-types': 'error',
     // 禁止使用 default-prop
-    'vue/require-default-prop': 'off',
+    'vue/require-default-prop': 'error',
     // 组件名必须是多个单词
     'vue/multi-word-component-names': 'off',
     // 优先使用 import from vue
