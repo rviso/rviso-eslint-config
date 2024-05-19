@@ -1,6 +1,6 @@
 {
   "name": "@rviso/eslint-config",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "提供快速的项目 ESLint 配置",
   "main": "index.js",
   "scripts": {
@@ -22,9 +22,9 @@
     "typescript": ">=4.9.5"
   },
   "dependencies": {
-    "@rviso/eslint-config-standard": "^0.1.7",
-    "@rviso/eslint-config-typescript": "^0.1.7",
-    "@rviso/eslint-config-vue": "^0.1.7",
+    "@rviso/eslint-config-standard": "^0.1.8",
+    "@rviso/eslint-config-typescript": "^0.1.8",
+    "@rviso/eslint-config-vue": "^0.1.8",
     "eslint": "^8.57.0"
   },
   "publishConfig": {

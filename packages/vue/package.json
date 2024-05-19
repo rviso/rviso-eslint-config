@@ -1,6 +1,6 @@
 {
   "name": "@rviso/eslint-config-vue",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "专为Vue项目提供的ESLint配置",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,7 @@
     "eslint": ">=8.0.1"
   },
   "dependencies": {
-    "@rviso/eslint-config-standard": "^0.1.7",
+    "@rviso/eslint-config-standard": "^0.1.8",
     "eslint": "^8.16.0",
     "eslint-plugin-vue": "^9.3.0"
   },
