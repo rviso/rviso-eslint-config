@@ -197,6 +197,9 @@ module.exports = {
       files: ['*.toml'],
       extends: ['plugin:toml/standard'],
       parser: 'toml-eslint-parser',
+      rules: {
+        'prettier/prettier': 'off',
+      },
     },
   ],
   rules: {
