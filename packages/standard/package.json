@@ -1,6 +1,6 @@
 {
   "name": "@rviso/eslint-config-standard",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "提供基础的 ESLint 配置",
   "main": "index.js",
   "scripts": {
