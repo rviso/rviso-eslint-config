@@ -19,7 +19,7 @@ module.exports = {
     // ------------------vue相关------------------
     // 有关vue的规则请参考：https://eslint.vuejs.org/rules/
     // 属性换行
-    'vue/max-attributes-per-line': 'error',
+    'vue/max-attributes-per-line': 'off',
     // 禁止使用 v-html
     'vue/no-v-html': 'off',
     // 禁止使用 prop-types

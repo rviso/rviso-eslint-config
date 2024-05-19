@@ -204,6 +204,7 @@ module.exports = {
         semi: false,
         bracketSpacing: true,
         endOfLine: 'lf',
+        printWidth: 120,
       },
     ],
 
