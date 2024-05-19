@@ -186,5 +186,7 @@ module.exports = {
     'vue/space-unary-ops': ['error', { words: true, nonwords: false }],
     // 模板大括号空格
     'vue/template-curly-spacing': 'error',
+    // 自闭合标签
+    'vue/html-self-closing': 'off',
   },
 }

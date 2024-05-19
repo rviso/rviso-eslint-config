@@ -29,6 +29,8 @@ module.exports = {
     'CHANGELOG.md',
     'dist',
     'LICENSE*',
+    'node_modules',
+    'LICENSE',
     'output',
     'coverage',
     'public',
@@ -193,6 +195,16 @@ module.exports = {
     },
   ],
   rules: {
+    'prettier/prettier': [
+      'error',
+      {
+        singleQuote: true,
+        trailingComma: 'all',
+        printWidth: 100,
+        tabWidth: 2,
+      },
+    ],
+
     //#region 与eslint官方规则 命名 相关的规则
     //---------------- 与eslint官方规则 命名 相关的规则 --------------
     camelcase: 'off', // 有时候会有驼峰命名
