@@ -301,7 +301,7 @@ module.exports = {
       'error',
       {
         commonjs: true,
-        ignorePatterns: ['^@/', '^@@/', '^@\\w+/\\w+', '^@\\w+']
+        ignore: ['^@/', '^@@/', '^@\\w+/\\w+', '^@\\w+']
       }
     ], // 确保导入的模块可以解析
     'import/no-absolute-path': 'error', // 有时候会有绝对路径
