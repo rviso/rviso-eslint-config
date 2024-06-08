@@ -2,10 +2,10 @@
 
 **English** | [中文](./README_zh-CN.md)
 
-![npm](https://img.shields.io/npm/v/@rviso/eslint-config-vue)
+![npm](https://img.shields.io/npm/v/@rviso/eslint-config)
 ![node](https://img.shields.io/badge/node-%5E18.0.0-bluegreen)
 ![author](https://img.shields.io/badge/author-lingann-purple)
-![license](https://img.shields.io/github/license/rviso/rviso-eslint-config)
+![license](https://img.shields.io/github/license/rviso/rviso-eslint)
 
 ---
 
@@ -25,38 +25,7 @@ Create a `.eslintrc` file in the root directory of your project with the followi
 
 ```json
 {
-  "extends": ["@rviso/eslint-config-standard"],
-  "overrides": [
-    {
-      "files": ["*.ts", "*.tsx"],
-      "extends": "@rviso/eslint-config-typescript"
-    },
-    {
-      "files": ["*.vue"],
-      "extends": "@rviso/eslint-config-vue"
-    }
-  ]
-}
-```
-
-if you are using Vue 3 + TypeScript, you can use the following configuration:
-
-```json
-{
-  "extends": ["@rviso/eslint-config-standard"],
-  "overrides": [
-    {
-      "files": ["*.ts", "*.tsx"],
-      "extends": "@rviso/eslint-config-typescript"
-    },
-    {
-      "files": ["*.vue"],
-      "extends": "@rviso/eslint-config-vue",
-      "parserOptions": {
-        "parser": "@typescript-eslint/parser"
-      }
-    }
-  ]
+  "extends": ["@rviso/eslint-config"],
 }
 ```
 
@@ -99,6 +68,4 @@ To make these settings take effect, you need to install the following plugins:
 
 ## Related
 
-- [@rviso/eslint-config-standard](https://www.npmjs.com/package/@rviso/eslint-config-standard) - RViso's ESLint standard configurations.
-- [@rviso/eslint-config-typescript](https://www.npmjs.com/package/@rviso/eslint-config-typescript) - RViso's ESLint TypeScript configurations.
-- [@rviso/eslint-config-vue](https://www.npmjs.com/package/@rviso/eslint-config-vue) - RViso's ESLint Vue configurations.
+- [@rviso/eslint-config](https://www.npmjs.com/package/@rviso/eslint-config) - RViso's ESLint Vue configurations.

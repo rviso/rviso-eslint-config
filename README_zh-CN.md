@@ -2,10 +2,10 @@
 
 [English](./README.md) | **中文**
 
-![npm](https://img.shields.io/npm/v/@rviso/eslint-config-vue)
+![npm](https://img.shields.io/npm/v/@rviso/eslint-config)
 ![node](https://img.shields.io/badge/node-%5E18.0.0-bluegreen)
 ![author](https://img.shields.io/badge/author-lingann-purple)
-![license](https://img.shields.io/github/license/rviso/rviso-eslint-config)
+![license](https://img.shields.io/github/license/rviso/rviso-eslint)
 
 ---
 
@@ -16,7 +16,7 @@ RViso的ESLint配置。您可以使用此包来为您的JavaScript、TypeScript�
 要安装这个包，请运行以下命令：
 
 ```bash
-npm install eslint @rviso/eslint-config-standard @rviso/eslint-config-typescript @rviso/eslint-config-vue --save-dev
+npm install eslint @rviso/eslint-config --save-dev
 ```
 
 ## Usage
@@ -25,38 +25,7 @@ npm install eslint @rviso/eslint-config-standard @rviso/eslint-config-typescript
 
 ```json
 {
-  "extends": ["@rviso/eslint-config-standard"],
-  "overrides": [
-    {
-      "files": ["*.ts", "*.tsx"],
-      "extends": "@rviso/eslint-config-typescript"
-    },
-    {
-      "files": ["*.vue"],
-      "extends": "@rviso/eslint-config-vue"
-    }
-  ]
-}
-```
-
-如果您使用的是Vue 3 + TypeScript，您可以使用以下配置：
-
-```json
-{
-  "extends": ["@rviso/eslint-config-standard"],
-  "overrides": [
-    {
-      "files": ["*.ts", "*.tsx"],
-      "extends": "@rviso/eslint-config-typescript"
-    },
-    {
-      "files": ["*.vue"],
-      "extends": "@rviso/eslint-config-vue",
-      "parserOptions": {
-        "parser": "@typescript-eslint/parser"
-      }
-    }
-  ]
+  "extends": ["@rviso/eslint-config"]
 }
 ```
 
@@ -95,6 +64,4 @@ npm install eslint @rviso/eslint-config-standard @rviso/eslint-config-typescript
 
 ## Related
 
-- [@rviso/eslint-config-standard](https://www.npmjs.com/package/@rviso/eslint-config-standard) - RViso 的 ESLint 标准配置
-- [@rviso/eslint-config-typescript](https://www.npmjs.com/package/@rviso/eslint-config-typescript) - RViso 的 ESLint TypeScript 配置。
-- [@rviso/eslint-config-vue](https://www.npmjs.com/package/@rviso/eslint-config-vue) - RViso 的 ESLint Vue 配置。
+- [@rviso/eslint-config](https://www.npmjs.com/package/@rviso/eslint-config) - RViso 的 ESLint Vue 配置。
