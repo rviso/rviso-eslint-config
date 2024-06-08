@@ -297,7 +297,13 @@ module.exports = {
     'import/order': 'error', // 引入顺序
     'import/first': 'error', // 引入顺序
     'import/no-mutable-exports': 'error', // 禁止使用 let 和 var 导出
-    'import/no-unresolved': 'error', // 有时候会有未解析的路径
+    'import/no-unresolved': [
+      'error',
+      {
+        commonjs: true,
+        ignorePatterns: ['^@/', '^@@/', '^@\\w+/\\w+', '^@\\w+']
+      }
+    ], // 确保导入的模块可以解析
     'import/no-absolute-path': 'error', // 有时候会有绝对路径
     'import/no-named-as-default-member': 'error', // 禁止将默认导出的名称用作命名导出
     'import/no-named-as-default': 'error', // 禁止将默认导出的名称用作命名导出
