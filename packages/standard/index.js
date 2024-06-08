@@ -22,30 +22,12 @@ module.exports = {
     'plugin:yml/standard',
     'plugin:markdown/recommended'
   ],
-  ignorePatterns: [
-    '*.min.*',
-    '*.d.ts',
-    'CHANGELOG.md',
-    'dist',
-    'LICENSE*',
-    'node_modules',
-    'LICENSE',
-    'output',
-    'coverage',
-    'public',
-    'temp',
-    'packages-lock.json',
-    'pnpm-lock.yaml',
-    'yarn.lock',
-    '__snapshots__',
-    '!.github',
-    '!.vitepress',
-    '!.vscode'
-  ],
   plugins: ['html', 'unicorn'],
   settings: {
     'import/resolver': {
-      node: { extensions: ['.js', '.mjs', '.ts', '.d.ts', '.json'] }
+      node: {
+        extensions: ['.js', '.mjs', '.ts', '.d.ts', '.json', '.node', '.yml', '.yaml', '.toml', '.vue', '.jsx', '.tsx']
+      }
     }
   },
   overrides: [
