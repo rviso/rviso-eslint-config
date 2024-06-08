@@ -1,6 +1,6 @@
 {
   "name": "@rviso/eslint-config-standard",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "提供基础的 ESLint 配置",
   "author": "Lingann Wang",
   "license": "MIT",
