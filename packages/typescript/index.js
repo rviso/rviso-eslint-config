@@ -1,41 +1,29 @@
 'use strict'
 
 module.exports = {
-  extends: [
-    'plugin:import/typescript',
-    'plugin:@typescript-eslint/recommended',
-  ],
+  extends: ['plugin:import/typescript', 'plugin:@typescript-eslint/recommended'],
   settings: {
     'import/resolver': {
       node: {
-        extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.d.ts'],
-      },
-    },
+        extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.d.ts']
+      }
+    }
   },
   overrides: [
     {
       files: ['*.ts', '*.tsx', '*.d.ts'],
-      parser: '@typescript-eslint/parser',
-    },
+      parser: '@typescript-eslint/parser'
+    }
   ],
   rules: {
     'import/named': 'off', // 禁止使用未导出的名称
     indent: 'off', // 缩进
     'no-useless-constructor': 'off', // 禁止不必要的构造函数
     // TS
-    '@typescript-eslint/ban-ts-comment': [
-      'error',
-      { 'ts-ignore': 'allow-with-description' },
-    ], // 允许使用 ts-ignore
-    '@typescript-eslint/member-delimiter-style': [
-      'error',
-      { multiline: { delimiter: 'none' } },
-    ], // 接口分号
+    '@typescript-eslint/ban-ts-comment': ['error', { 'ts-ignore': 'allow-with-description' }], // 允许使用 ts-ignore
+    '@typescript-eslint/member-delimiter-style': ['error', { multiline: { delimiter: 'none' } }], // 接口分号
     '@typescript-eslint/type-annotation-spacing': ['error', {}], // 类型注释空格
-    '@typescript-eslint/consistent-type-imports': [
-      'error',
-      { prefer: 'type-imports', disallowTypeAnnotations: false },
-    ], // 类型导入
+    '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports', disallowTypeAnnotations: false }], // 类型导入
     '@typescript-eslint/consistent-type-definitions': ['error', 'interface'], // 接口定义
     '@typescript-eslint/prefer-ts-expect-error': 'error', // 使用 ts-expect-error
 
@@ -75,22 +63,15 @@ module.exports = {
           'JSXText',
           'JSXEmptyExpression',
           'JSXSpreadChild',
-          'TSTypeParameterInstantiation',
+          'TSTypeParameterInstantiation'
         ],
-        offsetTernaryExpressions: true,
-      },
+        offsetTernaryExpressions: true
+      }
     ],
     '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }], // 禁止未使用的变量
     '@typescript-eslint/no-redeclare': 'error', // 禁止重复声明
-    '@typescript-eslint/no-use-before-define': [
-      'error',
-      { functions: false, classes: false, variables: true },
-    ], // 禁止在变量定义之前使用它们
-    '@typescript-eslint/brace-style': [
-      'error',
-      'stroustrup',
-      { allowSingleLine: true },
-    ], // 大括号风格
+    '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: false, variables: true }], // 禁止在变量定义之前使用它们
+    '@typescript-eslint/brace-style': ['error', 'stroustrup', { allowSingleLine: true }], // 大括号风格
     '@typescript-eslint/comma-dangle': 'off', // 逗号风格
     '@typescript-eslint/object-curly-spacing': ['error', 'always'], // 大括号内空格
     '@typescript-eslint/semi': ['error', 'never'], // 分号
@@ -102,26 +83,16 @@ module.exports = {
       {
         anonymous: 'always',
         named: 'never',
-        asyncArrow: 'always',
-      },
+        asyncArrow: 'always'
+      }
     ],
     '@typescript-eslint/space-infix-ops': 'error', // 运算符前后空格
-    '@typescript-eslint/keyword-spacing': [
-      'error',
-      { before: true, after: true },
-    ], // 关键字前后空格
-    '@typescript-eslint/comma-spacing': [
-      'error',
-      { before: false, after: true },
-    ], // 逗号前后空格
+    '@typescript-eslint/keyword-spacing': ['error', { before: true, after: true }], // 关键字前后空格
+    '@typescript-eslint/comma-spacing': ['error', { before: false, after: true }], // 逗号前后空格
     '@typescript-eslint/no-extra-parens': ['error', 'functions'], // 禁止不必要的括号
     '@typescript-eslint/no-dupe-class-members': 'error', // 禁止类成员中出现重复的名称
     '@typescript-eslint/no-loss-of-precision': 'error', // 禁止数字字面量中使用前导和末尾小数点
-    '@typescript-eslint/lines-between-class-members': [
-      'error',
-      'always',
-      { exceptAfterSingleLine: true },
-    ], // 要求或禁止在类成员之间出现空行
+    '@typescript-eslint/lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }], // 要求或禁止在类成员之间出现空行
     // off
     '@typescript-eslint/consistent-indexed-object-style': 'off', // 索引签名风格
     '@typescript-eslint/naming-convention': 'off', // 命名规则
@@ -137,6 +108,6 @@ module.exports = {
     '@typescript-eslint/ban-types': 'off', // 禁止使用特定的类型
     '@typescript-eslint/no-namespace': 'off', // 禁止使用命名空间
     '@typescript-eslint/triple-slash-reference': 'off', // 三斜线指令
-    '@typescript-eslint/strict-boolean-expressions': 'off', // 严格布尔表达式
-  },
+    '@typescript-eslint/strict-boolean-expressions': 'off' // 严格布尔表达式
+  }
 }

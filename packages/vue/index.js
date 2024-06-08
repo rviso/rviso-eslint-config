@@ -1,15 +1,11 @@
 'use strict'
 module.exports = {
-  extends: [
-    'standard',
-    'plugin:import/typescript',
-    'plugin:vue/vue3-recommended',
-  ],
+  extends: ['standard', 'plugin:import/typescript', 'plugin:vue/vue3-recommended'],
   overrides: [
     {
       files: ['*.vue'],
-      parser: 'vue-eslint-parser',
-    },
+      parser: 'vue-eslint-parser'
+    }
   ],
   rules: {
     // ------------------基础规则相关------------------
@@ -41,24 +37,24 @@ module.exports = {
     'vue/component-tags-order': [
       'error',
       {
-        order: ['template', 'script', 'style'],
-      },
+        order: ['template', 'script', 'style']
+      }
     ],
     // 块级标签换行
     'vue/block-tag-newline': [
       'error',
       {
         singleline: 'always',
-        multiline: 'always',
-      },
+        multiline: 'always'
+      }
     ],
     // 组件名必须是kebab-case
     'vue/component-name-in-template-casing': [
       'error',
       'kebab-case',
       {
-        registeredComponentsOnly: false,
-      },
+        registeredComponentsOnly: false
+      }
     ],
     // 组件名必须是PascalCase
     'vue/component-options-name-casing': ['error', 'PascalCase'],
@@ -66,8 +62,8 @@ module.exports = {
     'vue/define-macros-order': [
       'error',
       {
-        order: ['defineProps', 'defineEmits'],
-      },
+        order: ['defineProps', 'defineEmits']
+      }
     ],
     // 属性顺序
     'vue/attributes-order': [
@@ -84,18 +80,18 @@ module.exports = {
           'OTHER_DIRECTIVES', // 其他指令
           'OTHER_ATTR', // 其他属性
           'EVENTS', // 事件
-          'CONTENT', // 内容
+          'CONTENT' // 内容
         ],
-        alphabetical: false,
-      },
+        alphabetical: false
+      }
     ],
     // html注释内容空格
     'vue/html-comment-content-spacing': [
       'error',
       'always',
       {
-        exceptions: ['-'],
-      },
+        exceptions: ['-']
+      }
     ],
     // 禁止使用v-bind
     'vue/no-restricted-v-bind': ['error', '/^v-/'],
@@ -148,34 +144,23 @@ module.exports = {
     // 禁止数字字面量中使用前导和末尾小数点
     'vue/no-loss-of-precision': 'error',
     // 禁止使用特定的语法
-    'vue/no-restricted-syntax': [
-      'error',
-      'DebuggerStatement',
-      'LabeledStatement',
-      'WithStatement',
-    ],
+    'vue/no-restricted-syntax': ['error', 'DebuggerStatement', 'LabeledStatement', 'WithStatement'],
     // 禁止稀疏数组
     'vue/no-sparse-arrays': 'error',
     // 对象大括号换行
-    'vue/object-curly-newline': [
-      'error',
-      { multiline: true, consistent: true },
-    ],
+    'vue/object-curly-newline': ['error', { multiline: true, consistent: true }],
     // 对象大括号空格
     'vue/object-curly-spacing': ['error', 'always'],
     // 对象属性换行
-    'vue/object-property-newline': [
-      'error',
-      { allowMultiplePropertiesPerLine: true },
-    ],
+    'vue/object-property-newline': ['error', { allowMultiplePropertiesPerLine: true }],
     // 对象简写
     'vue/object-shorthand': [
       'error',
       'always',
       {
         ignoreConstructors: false,
-        avoidQuotes: true,
-      },
+        avoidQuotes: true
+      }
     ],
     // 操作符换行
     'vue/operator-linebreak': 'off',
@@ -192,16 +177,10 @@ module.exports = {
     // 模板大括号空格
     'vue/template-curly-spacing': 'error',
 
-    'vue/prefer-import-from-vue': 'error',
-    'vue/comma-dangle': 'error',
-    'vue/max-attributes-per-line': 'error',
     'vue/html-indent': ['error', 2],
     'vue/singleline-html-element-content-newline': 'error',
     'vue/multiline-html-element-content-newline': 'error',
 
-    '@typescript-eslint/consistent-type-imports': [
-      'error',
-      { prefer: 'type-imports', disallowTypeAnnotations: false },
-    ], // 类型导入
-  },
+    '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports', disallowTypeAnnotations: false }] // 类型导入
+  }
 }

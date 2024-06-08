@@ -1,9 +1,24 @@
 {
-  "editor.defaultFormatter": "esbenp.prettier-vscode", // 默认格式化工具
-  "editor.formatOnSave": true, // 保存自动格式化
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.formatOnSave": false, // 保存自动格式化
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
+  "eslint.enable": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html",
+    "vue-html",
+    "json",
+    "jsonc",
+    "markdown",
+    "yaml"
+  ],
   "GitCommitPlugin.MaxSubjectCharacters": 40,
+  "github.copilot.chat.localeOverride": "zh-CN",
   "cSpell.words": ["endregion", "rviso", "viso"]
 }
