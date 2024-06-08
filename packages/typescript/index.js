@@ -26,7 +26,7 @@ module.exports = {
     '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports', disallowTypeAnnotations: false }], // 类型导入
     '@typescript-eslint/consistent-type-definitions': ['error', 'interface'], // 接口定义
     '@typescript-eslint/prefer-ts-expect-error': 'error', // 使用 ts-expect-error
-
+    // '@typescript-eslint/brace-style': ['error', 'stroustrup', { allowSingleLine: true }], // 大括号风格
     '@typescript-eslint/indent': [
       'error',
       2,
@@ -71,7 +71,6 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }], // 禁止未使用的变量
     '@typescript-eslint/no-redeclare': 'error', // 禁止重复声明
     '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: false, variables: true }], // 禁止在变量定义之前使用它们
-    '@typescript-eslint/brace-style': ['error', 'stroustrup', { allowSingleLine: true }], // 大括号风格
     '@typescript-eslint/comma-dangle': 'off', // 逗号风格
     '@typescript-eslint/object-curly-spacing': ['error', 'always'], // 大括号内空格
     '@typescript-eslint/semi': ['error', 'never'], // 分号
@@ -94,6 +93,7 @@ module.exports = {
     '@typescript-eslint/no-loss-of-precision': 'error', // 禁止数字字面量中使用前导和末尾小数点
     '@typescript-eslint/lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }], // 要求或禁止在类成员之间出现空行
     // off
+    '@typescript-eslint/brace-style': 'off', // 大括号风格
     '@typescript-eslint/consistent-indexed-object-style': 'off', // 索引签名风格
     '@typescript-eslint/naming-convention': 'off', // 命名规则
     '@typescript-eslint/explicit-function-return-type': 'off', // 函数返回值类型
