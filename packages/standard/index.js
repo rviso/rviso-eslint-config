@@ -22,6 +22,27 @@ module.exports = {
     'plugin:yml/standard',
     'plugin:markdown/recommended'
   ],
+  ignorePatterns: [
+    '*.min.*',
+    'dist',
+    'lib',
+    'build',
+    'es',
+    'LICENSE*',
+    'node_modules',
+    'LICENSE',
+    'output',
+    'coverage',
+    'public',
+    'temp',
+    'packages-lock.json',
+    'pnpm-lock.yaml',
+    'yarn.lock',
+    '__snapshots__',
+    '!.github',
+    '!.vitepress',
+    '!.vscode'
+  ],
   plugins: ['html', 'unicorn'],
   settings: {
     'import/resolver': {
