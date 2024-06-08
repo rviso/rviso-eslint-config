@@ -31,17 +31,10 @@ module.exports = {
     'LICENSE*',
     'node_modules',
     'LICENSE',
-    'output',
-    'coverage',
-    'public',
-    'temp',
     'packages-lock.json',
     'pnpm-lock.yaml',
     'yarn.lock',
-    '__snapshots__',
-    '!.github',
-    '!.vitepress',
-    '!.vscode'
+    '__snapshots__'
   ],
   plugins: ['html', 'unicorn'],
   settings: {
