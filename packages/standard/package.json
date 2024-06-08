@@ -1,6 +1,6 @@
 {
   "name": "@rviso/eslint-config-standard",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "提供基础的 ESLint 配置",
   "main": "index.js",
   "scripts": {
@@ -35,10 +35,10 @@
   },
   "peerDependencies": {
     "eslint": ">=8.0.1",
-    "prettier": ">=3.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.2.0",
-    "eslint-plugin-promise": "^6.0.0"
+    "eslint-plugin-promise": "^6.0.0",
+    "prettier": ">=3.0.0"
   },
   "publishConfig": {
     "access": "public",
