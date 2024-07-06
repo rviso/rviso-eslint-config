@@ -22,13 +22,13 @@ importers:
   packages/eslint-config:
     dependencies:
       '@rviso/eslint-config-standard':
-        specifier: ^0.2.4
+        specifier: ^0.2.5
         version: link:../standard
       '@rviso/eslint-config-typescript':
-        specifier: ^0.2.4
+        specifier: ^0.2.5
         version: link:../typescript
       '@rviso/eslint-config-vue':
-        specifier: ^0.2.4
+        specifier: ^0.2.5
         version: link:../vue
       eslint:
         specifier: ^8.57.0
@@ -97,7 +97,7 @@ importers:
   packages/typescript:
     dependencies:
       '@rviso/eslint-config-standard':
-        specifier: ^0.2.4
+        specifier: ^0.2.5
         version: link:../standard
       '@typescript-eslint/eslint-plugin':
         specifier: ^5.26.0
@@ -115,7 +115,7 @@ importers:
   packages/vue:
     dependencies:
       '@rviso/eslint-config-standard':
-        specifier: ^0.2.4
+        specifier: ^0.2.5
         version: link:../standard
       eslint:
         specifier: ^8.16.0
