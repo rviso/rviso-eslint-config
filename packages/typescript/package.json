@@ -1,6 +1,6 @@
 {
   "name": "@rviso/eslint-config-typescript",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "提供基础的 TypeScript 项目 ESLint 配置",
   "author": "Lingann Wang",
   "license": "MIT",
@@ -29,7 +29,7 @@
     "typescript": ">=4.9.5"
   },
   "dependencies": {
-    "@rviso/eslint-config-standard": "^0.2.3",
+    "@rviso/eslint-config-standard": "^0.2.4",
     "@typescript-eslint/eslint-plugin": "^5.26.0",
     "@typescript-eslint/parser": "^5.26.0",
     "eslint": "^8.16.0"
