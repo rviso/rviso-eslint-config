@@ -5,13 +5,13 @@ module.exports = {
   settings: {
     'import/resolver': {
       node: {
-        extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.d.ts']
+        extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.d.ts', '.mts']
       }
     }
   },
   overrides: [
     {
-      files: ['*.ts', '*.tsx', '*.d.ts'],
+      files: ['*.ts', '*.tsx', '*.d.ts', '*.mts'],
       parser: '@typescript-eslint/parser'
     }
   ],
