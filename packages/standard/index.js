@@ -199,7 +199,7 @@ module.exports = {
         singleQuote: true,
         semi: false,
         bracketSpacing: true,
-        endOfLine: 'lf',
+        // endOfLine: 'auto',
         printWidth: 120
       }
     ],
